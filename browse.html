@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/browse.css" />
+    <title>Play Pro</title>
+</head>
+
+<body class="h-full">
+    <div class="p-2 container flex flex-col">
+        <div class="tabs" id="tabs"></div>
+        <div class="flex md:flex-grow-1 flex-col justify-between items-stretch md:flex-row">
+            <div class="sidebar">
+                <div class="flex h-full flex-grow-1 flex-col items-center justify-start">
+                    <div class="flex items-center w-full">
+                        <button type="button" class="bg-transparent p-1 border-none star flex items-center"><i
+                                style="font-size: 19px;" class="fa-solid fa-star"></i></button>
+                        <div class="search-box" style="flex-grow: 1;">
+                            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" name="query" id="searchInput" />
+                        </div>
+                    </div>
+                    <div class="w-full flex-grow-1">
+                        <div class="p-0 nav-bar-card h-full">
+                            <ul id="directory" class="nav-bar">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content h-full flex-grow">
+                <div class="web-content flex flex-wrap items-start" id="web-content">
+                    <div class="flex md:justify-start flex-wrap flex-col sm:flex-row items-center justify-center"
+                        id="main-content">
+                    </div>
+
+                    <div class="player" id="player">
+                        <div class="player-content">
+                            <div class="player-control">
+                                <div class="controls" id="replay"><i class="fa-solid fa-rotate-left"></i></div>
+                                <div class="controls" id="play"><i class="fa-solid fa-play"></i></div>
+                                <div class="controls" id="volume"><i class="fa-solid fa-volume-high"></i></div>
+                            </div>
+                            <div class="player-line">
+                                <input type="range" name="player-range" id="player-range" min="0" max="1" step="0.01"
+                                    value="0">
+                            </div>
+                            <div class="player-time" id="player-time"></div>
+                        </div>
+                        <div class="player-voice-wave">
+                            <div class="form-wave" data-audio-file=""></div>
+
+                        </div>
+
+                        <!-- footer add button -->
+                        <div class="footer-button">
+                            <!-- for other buttons -->
+                            <span></span>
+                            <button class="btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Use the non-ESM version of WaveSurfer.js -->
+    <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js"></script>
+    <!-- js script link -->
+    <script src="js/browse.js"></script>
+</body>
+
+</html>

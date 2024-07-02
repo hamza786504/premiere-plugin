@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/colorPicker.css" />
+    <title>Plugin</title>
+</head>
+
+<body>
+    <section class="p-2">
+        <div class="flex mb-3 items-center justify-between">
+            <p class="text-xl mb-0 capitalize text-white">Wiper Transition</p>
+            <button type="button" class="flex items-center settings border-none" id="settings">
+                <span class="bg-gray-500"></span>
+                <span class="bg-gray-500"></span>
+                <span class="bg-gray-500"></span>
+            </button>
+        </div>
+        <div class="flex mb-3 items-center justify-between">
+            <div class="flex-grow-1 flex items-center">
+                <input type="color" name="color" value="#ffffff" id="color" />
+                <p class="capitalize text-gray-500 ml-2 mb-0">Color</p>
+            </div>
+            <button type="button" class="flex cursor-pointer items-center settings border-none" id="eyedropperButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 text-gray-500" style="height: 20px;">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m15 11.25 1.5 1.5.75-.75V8.758l2.276-.61a3 3 0 1 0-3.675-3.675l-.61 2.277H12l-.75.75 1.5 1.5M15 11.25l-8.47 8.47c-.34.34-.8.53-1.28.53s-.94.19-1.28.53l-.97.97-.75-.75.97-.97c.34-.34.53-.8.53-1.28s.19-.94.53-1.28L12.75 9M15 11.25 12.75 9" />
+                </svg>
+
+            </button>
+        </div>
+        <div class="mb-3 checkbox-wrapper-13">
+            <input id="bottom_to_top" type="checkbox">
+            <label for="bottom_to_top" class="ml-2 text-gray-500">Bottom To Top</label>
+        </div>
+        <div class="mb-3 checkbox-wrapper-13">
+            <input id="top_to_bottom" type="checkbox">
+            <label for="top_to_bottom" class="ml-2 text-gray-500">Top To Bottom</label>
+        </div>
+        <div class="mb-3 flex flex-col items-stretch">
+            <label for="frame_size" class="text-white mb-2">Select Frame Size</label>
+            <select name="frame_size" id="frame_size" class="text-white p-1 py-2 border-2 rounded-sm border-gray-500 frame_size">
+                <option class="text-white" selected value="9x16 1080x1920">9x16 1080x1920</option>
+                <option class="text-white" value="1080x1920 9x16">1080x1920 9x16 </option>
+                <option class="text-white" value="9x16 1080x1920">9x16 1080x1920</option>
+                <option class="text-white" value="1080x1920 9x16">1080x1920 9x16 </option>
+            </select>
+        </div>
+        <div class="mb-3 flex flex-col items-stretch">
+            <label for="sound_effect" class="text-white mb-2">Include Sound Effect?</label>
+            <select name="sound_effect" id="sound_effect" class="text-white p-1 py-2 border-2 rounded-sm border-gray-500 frame_size">
+                <option class="text-white" value="Whoosh 01 Main">Whoosh 01 Main</option>
+                <option class="text-white" value="Whoosh 02 Main">Whoosh 02 Main</option>
+                <option class="text-white" value="Whoosh 03 Main">Whoosh 03 Main</option>
+                <option class="text-white" value="Whoosh 04 Main">Whoosh 04 Main</option>
+                <option class="text-white" value="Whoosh 05 Main">Whoosh 05 Main</option>
+            </select>
+        </div>
+    </section>
+
+
+    <script src="./js/colorPicker.js"></script>
+</body>
+
+</html>
